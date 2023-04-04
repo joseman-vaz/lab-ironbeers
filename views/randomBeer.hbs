@@ -1,0 +1,26 @@
+<div class='container'>
+  <h1 class='ml-4 mb-5'>Your Random Beer</h1>
+  <div class='row justify-content-center'>
+    <div class='col-md4 text-center'>
+      <img
+        class='img-fluid rounded'
+        src='{{randomBeer.0.image_url}}'
+        alt='{{randomBeer.0.name}}'
+        width='40%'
+      />
+    </div>
+    <div class='col-md-8'>
+      <h2>{{randomBeer.0.name}}</h2>
+      <p>{{randomBeer.0.description}}</p>
+      <p>{{randomBeer.0.tagline}}</p>
+      <h4>Food pairing</h4>
+      <ul>
+        {{#each randomBeer.0.food_pairing}}
+          <li>{{this}}</li>
+        {{/each}}
+      </ul>
+      <h4>Brewer tips</h4>
+      <p>{{randomBeer.0.brewers_tips}}</p>
+    </div>
+  </div>
+</div>

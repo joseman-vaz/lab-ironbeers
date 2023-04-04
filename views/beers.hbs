@@ -1,0 +1,16 @@
+<div class='container'>
+  <h1 class='ml-4 mb-5'>Beers</h1>
+  <div class='d-flex justify-content-center'>
+    <div class='col-12 col-md-10'>
+      {{#each beers}}
+        <div class='card mb-5 border-0'>
+          <img src='{{this.image_url}}' alt='{{this.name}}' width='100' />
+          <h2>{{this.name}}</h2>
+          <p>{{this.description}}</p>
+          <p>{{this.tagline}}</p>
+          <a href='/beers/{{this._id}}'>See more</a>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</div>
